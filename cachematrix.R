@@ -28,11 +28,6 @@ cacheSolve <- function(x, ...) {
   data<-x$get()
   m<-solve(data,...) #computes inverse
   x$setinverse(m)   #stores value for later retrieval
-  m
+  m #returns inverse value
 }
-
-
-mat<-matrix(1:4,nrow=2,ncol=2)
-test<-makeCacheMatrix(mat)
-cacheSolve(test)
 
